@@ -1,0 +1,17 @@
+* { box-sizing: border-box; font-family: Arial, sans-serif; }
+html, body, #app { height: 100%; margin: 0; }
+#app { display: flex; height: 100vh; }
+#sidebar { width: 300px; padding: 16px; background: #f7f8fb; border-right: 1px solid #e3e3e3; overflow-y: auto; }
+#canvasWrap { flex: 1; position: relative; background: #fff; }
+canvas { width: 100%; height: 100%; display: block; touch-action: none; }
+#cursors { position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; }
+.cursor { position: absolute; transform: translate(-50%,-50%); padding: 4px 6px; border-radius: 4px; font-size: 12px; color: white; white-space: nowrap; }
+#tools label, #userPanel label { display:block; margin-top: 12px; font-weight:600; }
+#tools input, #tools select, #userPanel input { width:100%; padding:6px; margin-top:6px; }
+.buttons { margin-top: 12px; display:flex; gap:8px; }
+button { padding:8px 10px; border: none; cursor: pointer; background: #2f80ed; color:#fff; border-radius:6px; }
+button:active { transform: translateY(1px); }
+#usersList { list-style: none; padding:0; margin:0; }
+.userItem { display:flex; gap:8px; align-items:center; margin-bottom:8px; }
+.userColor { width:16px; height:16px; border-radius:4px; display:inline-block; }
+#youInfo { margin-top:8px; font-size:13px; }
