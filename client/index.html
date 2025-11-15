@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Collaborative Canvas</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- <link rel="stylesheet" href="/style.css" /> -->
+  <link rel="stylesheet" href="/client/style.css">
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar">
+      <h2>Collaborative Canvas</h2>
+
+      <div id="userPanel">
+        <label>Your name</label>
+        <input id="username" placeholder="Anonymous" />
+        <button id="joinBtn">Join</button>
+        <div id="youInfo"></div>
+      </div>
+
+      <div id="tools">
+        <label>Tool</label>
+        <select id="tool">
+          <option value="brush">Brush</option>
+          <option value="eraser">Eraser</option>
+        </select>
+
+        <label>Color</label>
+        <input type="color" id="color" value="#000000" />
+
+        <label>Width</label>
+        <input id="width" type="range" min="1" max="50" value="4" />
+
+        <div class="buttons">
+          <button id="undoBtn">Undo</button>
+          <button id="redoBtn">Redo</button>
+          <button id="clearBtn">Clear</button>
+        </div>
+      </div>
+
+      <div id="online">
+        <h3>Online</h3>
+        <ul id="usersList"></ul>
+      </div>
+
+      <div id="notes">
+        <h4>Notes</h4>
+        <p>Global undo/redo removes/restores the last global stroke. Server authoritative history.</p>
+      </div>
+    </aside>
+
+    <main id="canvasWrap">
+      <canvas id="canvas"></canvas>
+      <div id="cursors"></div>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/client/websocket.js"></script>
+  <script src="/client/canvas.js"></script>
+  <script src="/client/main.js"></script>
+</body>
+</html>
