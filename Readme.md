@@ -37,6 +37,8 @@ This project was built without any frontend frameworks to demonstrate raw Canvas
 
 Run locally (see steps below).  
 
+## Screenshots
+demo/image.png
 
 ## How to Run the Project
 
@@ -55,5 +57,6 @@ npm install express socket.io uuid
 npm start
 
 ```
+
 
 
